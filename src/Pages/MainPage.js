@@ -75,6 +75,53 @@ function MainPage() {
             <div>
                 <div className="card containers">
                     <h2>About me</h2>
+                    <p style={{ textAlign: "left" }}>
+                        &nbsp; &nbsp; &nbsp;My name is Siang Meng and I am a 3rd
+                        yearInformation Systems student in SMU. I am aspiring to
+                        be a software engineer (espeically in startups) when I
+                        graduate.
+                        <br></br>
+                        &nbsp; &nbsp; &nbsp;Ever since I was young, I have been
+                        very fascinated with technology. When I was in secondary
+                        school, my passion in technology led me to join the
+                        Robotics Club of my secondary school. However, before I
+                        graduated from Secondary school, my interests shifted
+                        towards coding, which led me to take Computing as a
+                        subject in Junior College (JC), where I learnt how to
+                        self-learn and experiment other coding content outside
+                        of school. Fast forward, both my self-learning and
+                        passion grew as I entered SMU. This resulted in me
+                        picking up various Javascript frameworks which I learnt
+                        until now. After some time, I found myself working in a
+                        startup (Shoutout to{" "}
+                        <a
+                            target={"_blank"}
+                            href="https://floramis.com/"
+                            style={{ color: "white" }}
+                        >
+                            Floramis
+                        </a>
+                        ), which eventually helped me to open more doors.
+                        <br></br>
+                        &nbsp; &nbsp; &nbsp;After the second semester of my
+                        second year in SMU and my summer internship, I have further improved my skillsets
+                        and practices which I never knew before, and this has further strengthened my thirst in learning.
+                        <br></br>
+                        Here are the following traits that I have:
+                        <ul>
+                            <li>Self-driven</li>
+                            <li>Team-player</li>
+                            <li>Detail-oriented</li>
+                            <li>Adaptable</li>
+                        </ul>
+                        Here are my folloing hobbies I have aside from coding:
+                        <ul>
+                            <li>Going to the gym to lift weights</li>
+                            <li>Watching anime/web series on YouTube</li>
+                            <li>Listening to songs (Especially from D4DJ)</li>
+                            <li>Playing mobile games</li>
+                        </ul>
+                    </p>
                 </div>
                 <div className="card containers">
                     <h2>Skills</h2>
@@ -145,15 +192,20 @@ function MainPage() {
                     <h2>Experiences</h2>
                     {experiences.map((experience) => {
                         console.log(experience);
-                        return <div className = "card experienceContainer">
-                            <h4>{experience.company_name} - <i>{experience.title}</i> ({experience.starting}-{experience.ending})</h4>
-                            <ul>
-                                {experience.details.map((detail)=>{
-                                    return <li>{detail}</li>
-                                })}
-                            </ul>
-
-                        </div>;
+                        return (
+                            <div className="card experienceContainer">
+                                <h4>
+                                    {experience.company_name} -{" "}
+                                    <i>{experience.title}</i> (
+                                    {experience.starting}-{experience.ending})
+                                </h4>
+                                <ul>
+                                    {experience.details.map((detail) => {
+                                        return <li>{detail}</li>;
+                                    })}
+                                </ul>
+                            </div>
+                        );
                     })}
                 </div>
             </div>
