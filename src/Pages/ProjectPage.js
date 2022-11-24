@@ -38,7 +38,7 @@ function ProjectPage(props) {
             <div className="card containers">
                 <div class="row">
                     {projects ? (
-                        projects.reverse().map((project) => {
+                        projects.map((project) => {
                             return (
                                 <ProjectItem project={project}></ProjectItem>
                             );
