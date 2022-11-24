@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #496388;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +37,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* for the homepage */
+.containers{
+  background: rgba(37, 49, 66, 0.75);
+  color: white;
+  margin:10px;
+  min-height:80vh;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  /* border-radius: 10px; */
+}
+.containers h2{
+  text-align: left;
 }
