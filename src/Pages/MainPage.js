@@ -5,6 +5,7 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import ProjectItem from "../Components/ProjectItem";
 
 function MainPage() {
     const [skills, setSkills] = useState(null);
@@ -45,8 +46,11 @@ function MainPage() {
             .get(process.env.REACT_APP_BACKEND_API + "/projects")
             .then((res) => {
                 if (res.data.success) {
-                    console.log("projects", res.data.data);
-                    setProjects(res.data.data);
+                    var fetchedProjects = res.data.data.sort(function(a, b) { 
+                        return  b.year - a.year;
+                    })
+                    console.log("projects", fetchedProjects);
+                    setProjects(fetchedProjects);
                 }
             });
     };
@@ -108,6 +112,15 @@ function MainPage() {
                 </div>
                 <div className="card containers">
                     <h2>Projects</h2>
+
+                    {projects ? (
+                        projects.reverse().map(project=>{
+                            console.log(project)
+                            return <p>{project.name}</p>
+                        })
+                    ) : (
+                        <></>
+                    )}
                 </div>
                 <div className="card containers">
                     <h2>Experiences</h2>
