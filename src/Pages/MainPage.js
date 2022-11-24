@@ -72,8 +72,8 @@ function MainPage() {
     }, []);
     return (
         <div>
-            <div>
-                <div className="card containers">
+            <div style = {{marginTop:"10px"}}>
+                <div className="card containers" id = "home">
                     <h2>About me</h2>
                     <p style={{ textAlign: "left" }}>
                         &nbsp; &nbsp; &nbsp;My name is Siang Meng and I am a 3rd
@@ -123,7 +123,7 @@ function MainPage() {
                         </ul>
                     </p>
                 </div>
-                <div className="card containers">
+                <div className="card containers" id = "skills">
                     <h2>Skills</h2>
                     <VerticalTimeline lineColor={"#475466"}>
                         {skills ? (
@@ -159,7 +159,7 @@ function MainPage() {
                         )}
                     </VerticalTimeline>
                 </div>
-                <div className="card containers">
+                <div className="card containers" id = "projects">
                     <h2>Projects</h2>
                     <div class="row">
                         {projects ? (
@@ -188,7 +188,7 @@ function MainPage() {
                         See more
                     </Link>
                 </div>
-                <div className="card containers">
+                <div className="card containers" id = "experience">
                     <h2>Experiences</h2>
                     {experiences.map((experience) => {
                         console.log(experience);
