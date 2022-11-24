@@ -46,10 +46,10 @@ function MainPage() {
             .get(process.env.REACT_APP_BACKEND_API + "/projects")
             .then((res) => {
                 if (res.data.success) {
-                    var fetchedProjects = res.data.data.sort(function(a, b) { 
-                        return  b.year - a.year;
-                    })
-                    fetchedProjects = fetchedProjects.slice(0, 6)
+                    var fetchedProjects = res.data.data.sort(function (a, b) {
+                        return b.year - a.year;
+                    });
+                    fetchedProjects = fetchedProjects.slice(0, 4);
                     console.log("projects", fetchedProjects);
                     setProjects(fetchedProjects);
                 }
@@ -113,15 +113,21 @@ function MainPage() {
                 </div>
                 <div className="card containers">
                     <h2>Projects</h2>
-
-                    {projects ? (
-                        projects.reverse().map(project=>{
-                            console.log(project)
-                            return <p>{project.name}</p>
-                        })
-                    ) : (
-                        <></>
-                    )}
+                    <div class = "row">
+                        {projects ? (
+                            projects.reverse().map((project) => {
+                                console.log(project);
+                                return (
+                                    <ProjectItem
+                                        project={project}
+                                    ></ProjectItem>
+                                );
+                                // <p>{project.name}</p>
+                            })
+                        ) : (
+                            <></>
+                        )}
+                    </div>
                 </div>
                 <div className="card containers">
                     <h2>Experiences</h2>
