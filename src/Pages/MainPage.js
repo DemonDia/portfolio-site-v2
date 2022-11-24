@@ -6,6 +6,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import ProjectItem from "../Components/ProjectItem";
+import { Link } from "react-router-dom";
 
 function MainPage() {
     const [skills, setSkills] = useState(null);
@@ -127,6 +128,11 @@ function MainPage() {
                             <></>
                         )}
                     </div>
+                    <button class = "btn" style = {{background:"#0D1B61", borderRadius:"10px"}}>
+                        <Link to = "/projects" style = {{color:"white",textDecoration:"none"}}>
+                            See more
+                        </Link>
+                    </button>
                 </div>
                 <div className="card containers">
                     <h2>Experiences</h2>
