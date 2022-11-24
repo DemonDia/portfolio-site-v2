@@ -116,7 +116,6 @@ function MainPage() {
                     <div class = "row">
                         {projects ? (
                             projects.reverse().map((project) => {
-                                console.log(project);
                                 return (
                                     <ProjectItem
                                         project={project}
