@@ -101,7 +101,7 @@ function MainPage() {
                                             date={year}
                                         >
                                             {skills[year].map((skill) => {
-                                                return <p>{skill}</p>;
+                                                return <>{skill} </>;
                                             })}
                                         </VerticalTimelineElement>
                                     );
