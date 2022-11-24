@@ -70,6 +70,7 @@ function ProjectItem(props) {
                                     return (
                                         <>
                                             <a
+                                                target={"_blank"}
                                                 href={link.url}
                                                 style={{ color: "white" }}
                                             >
