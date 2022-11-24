@@ -49,6 +49,7 @@ function MainPage() {
                     var fetchedProjects = res.data.data.sort(function(a, b) { 
                         return  b.year - a.year;
                     })
+                    fetchedProjects = fetchedProjects.slice(0, 6)
                     console.log("projects", fetchedProjects);
                     setProjects(fetchedProjects);
                 }
