@@ -131,14 +131,30 @@ function MainPage() {
                     <Link
                         to="/projects"
                         class="btn"
-                        style={{ color: "white", background: "#0D1B61",
-                        borderRadius: "10px",textDecoration: "none" }}
+                        style={{
+                            color: "white",
+                            background: "#0D1B61",
+                            borderRadius: "10px",
+                            textDecoration: "none",
+                        }}
                     >
                         See more
                     </Link>
                 </div>
                 <div className="card containers">
                     <h2>Experiences</h2>
+                    {experiences.map((experience) => {
+                        console.log(experience);
+                        return <div className = "card experienceContainer">
+                            <h4>{experience.company_name} - <i>{experience.title}</i> ({experience.starting}-{experience.ending})</h4>
+                            <ul>
+                                {experience.details.map((detail)=>{
+                                    return <li>{detail}</li>
+                                })}
+                            </ul>
+
+                        </div>;
+                    })}
                 </div>
             </div>
         </div>
