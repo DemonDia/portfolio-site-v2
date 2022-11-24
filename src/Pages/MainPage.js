@@ -114,7 +114,7 @@ function MainPage() {
                 </div>
                 <div className="card containers">
                     <h2>Projects</h2>
-                    <div class = "row">
+                    <div class="row">
                         {projects ? (
                             projects.reverse().map((project) => {
                                 return (
@@ -128,11 +128,14 @@ function MainPage() {
                             <></>
                         )}
                     </div>
-                    <button class = "btn" style = {{background:"#0D1B61", borderRadius:"10px"}}>
-                        <Link to = "/projects" style = {{color:"white",textDecoration:"none"}}>
-                            See more
-                        </Link>
-                    </button>
+                    <Link
+                        to="/projects"
+                        class="btn"
+                        style={{ color: "white", background: "#0D1B61",
+                        borderRadius: "10px",textDecoration: "none" }}
+                    >
+                        See more
+                    </Link>
                 </div>
                 <div className="card containers">
                     <h2>Experiences</h2>
