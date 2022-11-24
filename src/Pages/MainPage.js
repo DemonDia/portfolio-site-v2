@@ -51,7 +51,6 @@ function MainPage() {
                         return b.year - a.year;
                     });
                     fetchedProjects = fetchedProjects.slice(0, 4);
-                    console.log("projects", fetchedProjects);
                     setProjects(fetchedProjects);
                 }
             });
