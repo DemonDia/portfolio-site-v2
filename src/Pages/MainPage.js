@@ -76,7 +76,7 @@ function MainPage() {
                     <h2>About me</h2>
                     <p style={{ textAlign: "left" }}>
                         &nbsp; &nbsp; &nbsp;My name is Siang Meng and I am a 3rd
-                        yearInformation Systems student in SMU. I am aspiring to
+                        year Information Systems student in SMU. I am aspiring to
                         be a software engineer (espeically in startups) when I
                         graduate.
                         <br></br>
@@ -113,7 +113,7 @@ function MainPage() {
                             <li>Detail-oriented</li>
                             <li>Adaptable</li>
                         </ul>
-                        Here are my folloing hobbies I have aside from coding:
+                        Here are my following hobbies I have aside from coding:
                         <ul>
                             <li>Going to the gym to lift weights</li>
                             <li>Watching anime/web series on YouTube</li>
