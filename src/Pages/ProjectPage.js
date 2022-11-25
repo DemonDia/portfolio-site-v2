@@ -21,7 +21,7 @@ function ProjectPage(props) {
             .then((res) => {
                 if (res.data.success) {
                     var fetchedProjects = res.data.data.sort(function (a, b) {
-                        return b.year - a.year;
+                        return a.year - b.year;
                     });
                     var allAvailableYears = [];
                     fetchedProjects.map((proj) => {
