@@ -52,11 +52,6 @@ function ProjectPage(props) {
                 <b>Back</b>
             </Link>
             <h2 style={{ color: "white" }}>Projects</h2>
-            Search: {search}
-            <br></br>
-            Filter year: {filterYear}
-            <br></br>
-            Sort by: {sortBy}
             <div className="card containers">
                 <div className="row">
                     <div className="col-4">
