@@ -29,12 +29,39 @@ function ProjectPage(props) {
                     textAlign: "left",
                     display: "block",
                 }}
-                to = "/"
+                to="/"
             >
                 <b>Back</b>
             </Link>
             <h2 style={{ color: "white" }}>Projects</h2>
-            <div className="card containers"></div>
+            <div className="card containers">
+                <div className="row">
+                    <div className="col-4">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Search by name"
+                        />
+                    </div>
+                    <div className="col-3">
+                        <select class="form-select">
+                            <option selected value="0">
+                                Select Year
+                            </option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div className="col-3">
+                        <select class="form-select">
+                            <option selected value = "0">Sort by</option>
+                            <option value="1">A-Z</option>
+                            <option value="2">Z-A</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div className="card containers">
                 <div class="row">
                     {projects ? (
