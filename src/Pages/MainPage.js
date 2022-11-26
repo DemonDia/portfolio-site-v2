@@ -235,23 +235,31 @@ function MainPage() {
                 {loadedExperiences ? (
                     <div className="card containers" id="experience">
                         <h2>Experiences</h2>
-                        {experiences.map((experience) => {
-                            return (
-                                <div className="card experienceContainer">
-                                    <h4>
-                                        {experience.company_name} -{" "}
-                                        <i>{experience.title}</i> (
-                                        {experience.starting}-
-                                        {experience.ending})
-                                    </h4>
-                                    <ul>
-                                        {experience.details.map((detail) => {
-                                            return <li>{detail}</li>;
-                                        })}
-                                    </ul>
-                                </div>
-                            );
-                        })}
+                        <div className="row">
+                            {experiences.map((experience) => {
+                                return (
+                                    <div class="col-sm-6">
+                                        <div className="card experienceContainer">
+                                            <h4>
+                                                {experience.company_name} -{" "}
+                                                <i>{experience.title}</i> (
+                                                {experience.starting}-
+                                                {experience.ending})
+                                            </h4>
+                                            <ul>
+                                                {experience.details.map(
+                                                    (detail) => {
+                                                        return (
+                                                            <li>{detail}</li>
+                                                        );
+                                                    }
+                                                )}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 ) : (
                     <LoadingComponent />

@@ -5,16 +5,8 @@ function ProjectItem(props) {
     const [modalOpen, setModalOpen] = useState(false);
     return (
         <>
-            <div class="col-6">
-                <a
-                // href=""
-                // onMouseEnter={() => {
-                //     setHovered(true);
-                // }}
-                // onMouseLeave={() => {
-                //     setHovered(false);
-                // }}
-                >
+            <div className=" col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                <a style={{ color: "white", textDecoration: "none" }}>
                     <div
                         class="card projectItem"
                         style={{ margin: "10px", padding: "10px" }}

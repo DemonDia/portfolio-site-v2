@@ -58,7 +58,8 @@ function ProjectPage(props) {
             <h2 style={{ color: "white" }}>Projects</h2>
             <div className="card containers">
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-md-4"
+                    style = {{padding:"10px"}}>
                         <input
                             onChange={(e) => {
                                 setSearch(e.target.value);
@@ -68,7 +69,8 @@ function ProjectPage(props) {
                             placeholder="Search by name"
                         />
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3"
+                    style = {{padding:"10px"}}>
                         <select
                             class="form-select"
                             onChange={(e) => {
@@ -88,7 +90,8 @@ function ProjectPage(props) {
                             )}
                         </select>
                     </div>
-                    <div className="col-3">
+                    <div className="col-md-3"
+                    style = {{padding:"10px"}}>
                         <select
                             class="form-select"
                             onChange={(e) => {
