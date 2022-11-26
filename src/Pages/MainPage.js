@@ -81,10 +81,8 @@ function MainPage() {
                             <h2>About me</h2>
                             <hr></hr>
                             <p style={{ textAlign: "left" }}>
-                                <h1>Lee Siang Meng</h1>
-                                Full Stack
-                                <br></br>
-                                <br></br>
+                                <h1>Lee Siang Meng | Full Stack</h1>
+                                
                                 &nbsp; &nbsp; &nbsp;Hello, I am a{" "}
                                 <b style={{ color: "#B1B1FF" }}>penultimate </b>
                                 student at Singapore Management University.
