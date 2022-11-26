@@ -168,7 +168,6 @@ function MainPage() {
                                 Object.keys(skills)
                                     .reverse()
                                     .map((year) => {
-                                        // console.log(currSkills[year])
                                         return (
                                             <VerticalTimelineElement
                                                 className="vertical-timeline-element"
@@ -237,7 +236,6 @@ function MainPage() {
                     <div className="card containers" id="experience">
                         <h2>Experiences</h2>
                         {experiences.map((experience) => {
-                            console.log(experience);
                             return (
                                 <div className="card experienceContainer">
                                     <h4>

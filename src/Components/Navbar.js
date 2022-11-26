@@ -36,7 +36,6 @@ function Navbar(props) {
                 >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         {navigation.map((nav) => {
-                            console.log(nav);
                             return (
                                 <li className="nav-item">
                                     <a
