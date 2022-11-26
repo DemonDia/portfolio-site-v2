@@ -9,12 +9,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -30,19 +24,24 @@
   color: #61dafb;
 }
 
+
 /* for the homepage */
 .containers {
   background: rgba(37, 49, 66, 0.75);
   color: white;
   margin: 10px;
   padding: 10px;
-  /* min-height: 80vh; */
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-  /* border-radius: 10px; */
 }
 
 .containers h2 {
   text-align: left;
+}
+
+/* for the "about me" */
+#picContainer{
+  background:#0D1B61;
+  width: 100%;
+  height:40vh;
 }
 
 /* for the skill */
@@ -72,9 +71,63 @@
   padding: 10px;
   color: white;
 }
-.experienceContainer h4{
+
+.experienceContainer h4 {
   text-align: start;
 }
-.experienceContainer ul li{
+
+.experienceContainer ul li {
   text-align: left;
+}
+
+/* contacts */
+.contactBtn {
+  margin: 10px;
+  color: white;
+}
+
+.contactBtn:hover {
+  transition: 0.8s background-color;
+}
+
+.contactBtn a {
+  color: white;
+}
+.contactBtn a:hover {
+  transition: 0.8s background-color;
+  color: black;
+}
+
+/* linkedin */
+#linkedinBtn {
+  background: #0077B7;
+}
+
+#linkedinBtn:hover {
+  background: #53c3ff;
+  color: black;
+}
+
+/* github */
+#githubBtn,#emailBtn {
+  background: black
+}
+
+#githubBtn:hover,#emailBtn:hover {
+  background: white;
+  color: black;
+}
+
+/* ig */
+#igBtn {
+  text-align: center;
+  color: #fff;
+  background: rgb(205, 50, 50);
+
+  /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); */
+}
+
+#igBtn:hover {
+  background: rgb(255, 58, 58);
+  color: black;
 }

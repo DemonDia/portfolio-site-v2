@@ -6,7 +6,7 @@ function Navbar(props) {
         { name: "Skills", href: "/#skills" },
         { name: "Projects", href: "/#projects" },
         { name: "Experience", href: "/#experience" },
-        { name: "Contacts", href: "/#contacts" },
+        // { name: "Contacts", href: "/#contacts" },
     ];
 
     return (
