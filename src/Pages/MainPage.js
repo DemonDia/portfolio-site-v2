@@ -12,7 +12,6 @@ function MainPage() {
     const [skills, setSkills] = useState(null);
     const [projects, setProjects] = useState([]);
     const [experiences, setExperiences] = useState([]);
-    const [currentSkillYear, setSkillYear] = useState(0);
 
     const [loadedSkills, setLoadedSkills] = useState(false);
     const [loadedProjects, setLoadedProjects] = useState(false);
@@ -40,11 +39,6 @@ function MainPage() {
                     });
 
                     setSkills(skillDict);
-                    setSkillYear(
-                        Object.keys(skillDict)[
-                            Object.keys(skillDict).length - 1
-                        ]
-                    );
                     setLoadedSkills(true);
                 }
             });
@@ -83,11 +77,11 @@ function MainPage() {
             <div style={{ marginTop: "10px" }}>
                 <div className="card containers" id="home">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-xs-12 col-sm-12 col-md-6">
                             <h2>About me</h2>
                             <hr></hr>
                             <p style={{ textAlign: "left" }}>
-                                <h5>Lee Siang Meng</h5>
+                                <h1>Lee Siang Meng</h1>
                                 Full Stack
                                 <br></br>
                                 <br></br>
@@ -155,7 +149,7 @@ function MainPage() {
                                 </a>
                             </p>
                         </div>
-                        <div className="col-6">
+                        <div className="col-xs-12 col-sm-12 col-md-6">
                             <div id="picContainer"></div>
                         </div>
                     </div>
@@ -163,6 +157,7 @@ function MainPage() {
                 {loadedSkills ? (
                     <div className="card containers" id="skills">
                         <h2>Skills</h2>
+                        <hr></hr>
                         <VerticalTimeline lineColor={"#475466"}>
                             {skills ? (
                                 Object.keys(skills)
@@ -202,6 +197,7 @@ function MainPage() {
                 {loadedProjects ? (
                     <div className="card containers" id="projects">
                         <h2>Projects</h2>
+                        <hr></hr>
                         <div class="row">
                             {projects ? (
                                 projects.reverse().map((project) => {
@@ -235,6 +231,7 @@ function MainPage() {
                 {loadedExperiences ? (
                     <div className="card containers" id="experience">
                         <h2>Experiences</h2>
+                        <hr></hr>
                         <div className="row">
                             {experiences.map((experience) => {
                                 return (
