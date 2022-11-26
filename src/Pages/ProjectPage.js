@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ProjectItem from "../Components/ProjectItem";
+import LoadingComponent from "../Components/LoadingComponent";
 function ProjectPage(props) {
     const [projects, setProjects] = useState([]);
 
@@ -14,6 +15,8 @@ function ProjectPage(props) {
 
     // in A-Z or Z-A
     const [sortBy, setSortBy] = useState(0);
+
+    const [loaded, setLoaded] = useState(false);
 
     const getProjects = async () => {
         await axios
@@ -31,6 +34,7 @@ function ProjectPage(props) {
                     });
                     setAvailableYears(allAvailableYears);
                     setProjects(fetchedProjects);
+                    setLoaded(true)
                 }
             });
     };
@@ -100,34 +104,46 @@ function ProjectPage(props) {
                     </div>
                 </div>
             </div>
-            <div className="card containers">
-                <div class="row">
-                    {projects ? (
-                        projects
-                            .filter(
-                                (project) =>
-                                    (filterYear > 0?project.year == filterYear:project )&&
-                                    project.name
-                                        .toLowerCase()
-                                        .includes(search.toLowerCase())
-                            ).sort((a, b) => 
-                            sortBy == 1?
-                            (a.name > b.name ? 1 : -1):
-                            sortBy == 2?
-                            (b.name > a.name ? 1 : -1):-1
-                            )
-                            .map((project) => {
-                                return (
-                                    <ProjectItem
-                                        project={project}
-                                    ></ProjectItem>
-                                );
-                            })
-                    ) : (
-                        <></>
-                    )}
+            {loaded ? (
+                <div className="card containers">
+                    <div class="row">
+                        {projects ? (
+                            projects
+                                .filter(
+                                    (project) =>
+                                        (filterYear > 0
+                                            ? project.year == filterYear
+                                            : project) &&
+                                        project.name
+                                            .toLowerCase()
+                                            .includes(search.toLowerCase())
+                                )
+                                .sort((a, b) =>
+                                    sortBy == 1
+                                        ? a.name > b.name
+                                            ? 1
+                                            : -1
+                                        : sortBy == 2
+                                        ? b.name > a.name
+                                            ? 1
+                                            : -1
+                                        : -1
+                                )
+                                .map((project) => {
+                                    return (
+                                        <ProjectItem
+                                            project={project}
+                                        ></ProjectItem>
+                                    );
+                                })
+                        ) : (
+                            <></>
+                        )}
+                    </div>
                 </div>
-            </div>
+            ) : (
+                <LoadingComponent />
+            )}
         </div>
     );
 }

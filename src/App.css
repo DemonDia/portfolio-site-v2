@@ -23,7 +23,17 @@
 .App-link {
   color: #61dafb;
 }
-
+/* for the loading */
+.loadingContainer{
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+.loadingContainer div .loader{
+  color:#B1B1FF;
+  min-height: 100px;
+  min-width: 100px;
+}
 
 /* for the homepage */
 .containers {
@@ -31,6 +41,7 @@
   color: white;
   margin: 10px;
   padding: 10px;
+  font-size: 30px;
 }
 
 .containers h2 {
