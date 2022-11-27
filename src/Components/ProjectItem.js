@@ -24,7 +24,6 @@ function ProjectItem(props) {
             </div>
             <div
                 class="modal fade"
-                // id="LOL"
                 id={"X" + props.project._id}
                 data-bs-keyboard="false"
                 tabindex="-1"

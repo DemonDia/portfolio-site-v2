@@ -8,6 +8,7 @@ import "react-vertical-timeline-component/style.min.css";
 import ProjectItem from "../Components/ProjectItem";
 import { Link } from "react-router-dom";
 import LoadingComponent from "../Components/LoadingComponent";
+import MessageComponent from "../Components/MessageComponent";
 function MainPage() {
     const [skills, setSkills] = useState(null);
     const [projects, setProjects] = useState([]);
@@ -89,6 +90,9 @@ function MainPage() {
                                 <br></br>
                                 &nbsp; &nbsp; &nbsp;I love doing collaborative
                                 work with others while learning in the process!
+                                <br></br>
+                                <MessageComponent/>
+
                                 <br></br>
                                 <a
                                     target="_blank"
