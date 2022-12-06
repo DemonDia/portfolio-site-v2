@@ -11,12 +11,12 @@ function Navbar(props) {
 
     return (
         <nav
-            class="navbar fixed-top navbar-expand-lg"
+            class="navbar navbar-dark fixed-top navbar-expand-lg"
             style={{ background: "#253142" }}
         >
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    {/* Navbar */}
+                    Siang Meng
                 </a>
                 <button
                     class="navbar-toggler"

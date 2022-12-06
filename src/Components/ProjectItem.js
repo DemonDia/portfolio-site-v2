@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 function ProjectItem(props) {
-    const [hovered, setHovered] = useState(false);
-    const [modalOpen, setModalOpen] = useState(false);
     return (
         <>
             <div className=" col-xl-2 col-lg-3 col-md-4 col-sm-6">
@@ -14,11 +12,13 @@ function ProjectItem(props) {
                         // data-bs-target="#LOL"
                         data-bs-target={"#X" + props.project._id}
                     >
-                        <h4>
+                        <h1>
                             {props.project.name} ({props.project.year})
-                        </h4>
+                        </h1>
                         <img class="" src={props.project.image} />
-                        <p>Click for more info!</p>
+                        <Link style={{ color: "white", fontSize: "18px" }}>
+                            Click for more info!
+                        </Link>
                     </div>
                 </a>
             </div>
@@ -34,12 +34,9 @@ function ProjectItem(props) {
                         style={{ background: "#475466" }}
                     >
                         <div class="modal-header">
-                            <h4
-                                class="modal-title fs-5"
-                                id="staticBackdropLabel"
-                            >
+                            <h1 class="modal-title" id="staticBackdropLabel">
                                 {props.project.name} ({props.project.year})
-                            </h4>
+                            </h1>
                             <button
                                 type="button"
                                 class="btn-close"
@@ -48,18 +45,24 @@ function ProjectItem(props) {
                             ></button>
                         </div>
                         <div class="modal-body">
-                            <h5 style={{ textAlign: "left" }}>Tech Stacks</h5>
-                            <p style={{ textAlign: "left" }}>
+                            <h2 style={{ textAlign: "left" }}>Tech Stacks</h2>
+                            <ul style={{ textAlign: "left", fontSize: "15px" }}>
                                 {props.project.tech_stack.map((techStack) => {
-                                    return <>{techStack}, </>;
+                                    return (
+                                        <li>
+                                            {" "}
+                                            {techStack}
+                                            <br></br>{" "}
+                                        </li>
+                                    );
                                 })}
-                            </p>
+                            </ul>
 
-                            <h5 style={{ textAlign: "left" }}>Links</h5>
-                            <p style={{ textAlign: "left" }}>
+                            <h2 style={{ textAlign: "left" }}>Links</h2>
+                            <ul style={{ textAlign: "left", fontSize: "15px" }}>
                                 {props.project.links.map((link) => {
                                     return (
-                                        <>
+                                        <li>
                                             <a
                                                 target={"_blank"}
                                                 href={link.url}
@@ -67,11 +70,10 @@ function ProjectItem(props) {
                                             >
                                                 {link.name}
                                             </a>
-                                            ,{" "}
-                                        </>
+                                        </li>
                                     );
                                 })}
-                            </p>
+                            </ul>
                         </div>
                         <div class="modal-footer"></div>
                     </div>

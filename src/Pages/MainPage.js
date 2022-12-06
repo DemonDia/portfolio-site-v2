@@ -81,9 +81,8 @@ function MainPage() {
                         <div className="col-xs-12 col-sm-12 col-md-6">
                             <h2>About me</h2>
                             <hr></hr>
-                            <p style={{ textAlign: "left" }}>
-                                <h1>Lee Siang Meng | Full Stack</h1>
-                                
+                            <p style={{ textAlign: "left", fontSize: "18px" }}>
+                                <h3>Lee Siang Meng | Full Stack</h3>
                                 &nbsp; &nbsp; &nbsp;Hello, I am a{" "}
                                 <b style={{ color: "#B1B1FF" }}>penultimate </b>
                                 student at Singapore Management University.
@@ -91,8 +90,7 @@ function MainPage() {
                                 &nbsp; &nbsp; &nbsp;I love doing collaborative
                                 work with others while learning in the process!
                                 <br></br>
-                                <MessageComponent/>
-
+                                <MessageComponent />
                                 <br></br>
                                 <a
                                     target="_blank"
@@ -171,6 +169,7 @@ function MainPage() {
                                                 contentStyle={{
                                                     background: "#475466",
                                                     color: "white",
+                                                    fontSize: "18px",
                                                 }}
                                                 contentArrowStyle={{
                                                     borderRight:
@@ -182,9 +181,20 @@ function MainPage() {
                                                 }}
                                                 date={year}
                                             >
-                                                {skills[year].map((skill) => {
+                                                <ul>
+                                                    {skills[year].map(
+                                                        (skill) => {
+                                                            return (
+                                                                <li style = {{textAlign:"left"}}>
+                                                                    {skill}{" "}
+                                                                </li>
+                                                            );
+                                                        }
+                                                    )}
+                                                </ul>
+                                                {/* {skills[year].map((skill) => {
                                                     return <>{skill} </>;
-                                                })}
+                                                })} */}
                                             </VerticalTimelineElement>
                                         );
                                     })
@@ -239,17 +249,24 @@ function MainPage() {
                                 return (
                                     <div class="col-sm-6">
                                         <div className="card experienceContainer">
-                                            <h4>
+                                            <h2 style={{ textAlign: "left" }}>
                                                 {experience.company_name} -{" "}
                                                 <i>{experience.title}</i> (
                                                 {experience.starting}-
                                                 {experience.ending})
-                                            </h4>
-                                            <ul>
+                                            </h2>
+                                            <ul tyle={{ textAlign: "left" }}>
                                                 {experience.details.map(
                                                     (detail) => {
                                                         return (
-                                                            <li>{detail}</li>
+                                                            <li
+                                                                style={{
+                                                                    fontSize:
+                                                                        "18px",
+                                                                }}
+                                                            >
+                                                                {detail}
+                                                            </li>
                                                         );
                                                     }
                                                 )}
